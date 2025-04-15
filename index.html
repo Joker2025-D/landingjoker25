@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinturas el Joker - Pintura Especializada para Motos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Estilo para imágenes de galería */
+        .gallery-img {
+            aspect-ratio: 1 / 1; /* Mantiene las imágenes cuadradas */
+            object-fit: cover; /* Asegura que la imagen cubra el espacio */
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05); /* Efecto zoom al pasar el cursor */
+        }
+        /* Clases personalizadas para colores Joker (opcional, puedes usar directamente los de Tailwind) */
+        .bg-joker-purple { background-color: #6d28d9; } /* purple-700 */
+        .text-joker-green { color: #84cc16; } /* lime-500 */
+        .border-joker-green { border-color: #84cc16; }
+        .hover\:bg-joker-green:hover { background-color: #a3e635; } /* lime-400 */
+        .hover\:text-joker-purple:hover { color: #7c3aed; } /* purple-600 */
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-purple-700/50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-white tracking-wider">
+                Pinturas <span class="text-joker-green">el Joker</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#galeria" class="text-gray-300 hover:text-joker-green transition duration-300">Galería</a>
+                <a href="#servicios" class="text-gray-300 hover:text-joker-green transition duration-300">Servicios</a>
+                <a href="#redes" class="text-gray-300 hover:text-joker-green transition duration-300">Redes</a>
+                <a href="#contacto" class="bg-purple-700 hover:bg-purple-600 text-white font-bold py-2 px-5 rounded-lg transition duration-300 shadow-md hover:shadow-lg">Contactar</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 absolute top-full left-0 w-full border-t border-purple-700/50">
+            <a href="#galeria" class="block px-6 py-3 text-gray-300 hover:bg-purple-800 hover:text-white">Galería</a>
+            <a href="#servicios" class="block px-6 py-3 text-gray-300 hover:bg-purple-800 hover:text-white">Servicios</a>
+            <a href="#redes" class="block px-6 py-3 text-gray-300 hover:bg-purple-800 hover:text-white">Redes Sociales</a>
+            <a href="#contacto" class="block px-6 py-3 text-gray-300 hover:bg-purple-800 hover:text-white">Contacto</a>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white py-24 md:py-40 px-6 relative overflow-hidden">
+         <div class="absolute top-0 left-0 w-32 h-32 bg-green-500/10 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+         <div class="absolute bottom-0 right-0 w-40 h-40 bg-purple-600/10 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-2000"></div>
+
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight drop-shadow-lg">
+                ¡Ponle una <span class="text-joker-green">Sonrisa</span> a Tu Moto!
+            </h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+                Pintura especializada con personalidad. Diseños únicos y acabados de locura para que tu moto destaque en Bogotá y más allá.
+            </p>
+            <div class="space-x-4">
+                 <a href="#galeria" class="bg-joker-green hover:bg-lime-400 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg hover:shadow-xl">Ver Trabajos</a>
+                 <a href="#contacto" class="bg-transparent border-2 border-joker-green text-joker-green hover:bg-joker-green hover:text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Cotizar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-16 md:py-24 bg-gray-800 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                Nuestra <span class="text-joker-green">Galería</span> de Locuras
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/moto_azul_joker.jpg.jpg" alt="[Moto deportiva verde y morada]" class="w-full h-auto gallery-img">
+                </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/moto_tanque.jpg.jpg" alt="[Descripción del trabajo 2]" class="w-full h-auto gallery-img">
+                </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/moto_azulcileo.jpg.jpg" alt="[Descripción del trabajo 3]" class="w-full h-auto gallery-img">
+                </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/moto_guarda_barros.jpg.jpg" alt="[Descripción del trabajo 4]" class="w-full h-auto gallery-img">
+                </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/moto_rin_rojo_joker.jpg.jpg" alt="[Descripción del trabajo 5]" class="w-full h-auto gallery-img">
+                </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg gallery-item border-2 border-transparent hover:border-joker-green transition duration-300">
+                    <img src="imagenes/IMG_20240401_190835.jpg" alt="[Descripción del trabajo 6]" class="w-full h-auto gallery-img">
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-16 md:py-24 bg-gray-900 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Servicios con <span class="text-purple-500">Personalidad</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border-t-4 border-joker-green transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-palette text-4xl text-joker-green mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Diseños Personalizados</h3>
+                    <p class="text-gray-400">Creamos arte único para tu moto. Aerografía, temáticas, logos y lo que imagines.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border-t-4 border-purple-600 transform hover:scale-105 transition duration-300">
+                     <i class="fas fa-spray-can-sparkles text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Acabados Premium</h3>
+                    <p class="text-gray-400">Colores vibrantes, efectos candy, mate, perlado, metalizado y barnices de alta resistencia.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border-t-4 border-joker-green transform hover:scale-105 transition duration-300">
+                     <i class="fas fa-motorcycle text-4xl text-joker-green mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Restauración y Modificación</h3>
+                    <p class="text-gray-400">Devolvemos la vida a pinturas clásicas o modificamos carenados y piezas a tu gusto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="redes" class="py-16 bg-gradient-to-r from-purple-800 to-purple-900 text-white px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Síguenos y Mira Más Locuras</h2>
+            <p class="mb-8 text-gray-300">Estamos siempre creando. ¡No te pierdas nuestros últimos proyectos en redes!</p>
+            <div class="flex justify-center space-x-6 md:space-x-8">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-joker-green transform hover:scale-125 transition duration-300">
+                    <i class="fab fa-instagram text-4xl md:text-5xl"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-joker-green transform hover:scale-125 transition duration-300">
+                    <i class="fab fa-facebook-square text-4xl md:text-5xl"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-joker-green transform hover:scale-125 transition duration-300">
+                    <i class="fab fa-tiktok text-4xl md:text-5xl"></i>
+                </a>
+                 <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-joker-green transform hover:scale-125 transition duration-300">
+                    <i class="fab fa-whatsapp text-4xl md:text-5xl"></i> </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-16 md:py-24 bg-gray-800 text-gray-200 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white">¿Tienes una <span class="text-joker-green">Idea</span>? Hablemos</h2>
+            <p class="text-center text-lg text-gray-400 mb-10">Completa el formulario o contáctanos directamente. ¡Estamos en Bogotá!</p>
+
+            <form action="#" method="POST" class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="nombre" class="block text-sm font-bold mb-2 text-gray-300">Tu Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-bold mb-2 text-gray-300">Tu Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500">
+                    </div>
+                </div>
+                 <div class="mb-6">
+                    <label for="moto" class="block text-sm font-bold mb-2 text-gray-300">Tu Moto (Marca/Modelo - Opcional)</label>
+                    <input type="text" id="moto" name="moto" class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500">
+                </div>
+                <div class="mb-6">
+                    <label for="mensaje" class="block text-sm font-bold mb-2 text-gray-300">Cuéntanos tu idea</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-joker-green hover:bg-lime-400 text-gray-900 font-bold py-3 px-10 rounded-lg text-lg transition duration-300 shadow-md hover:shadow-lg">Enviar Consulta</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-12 text-gray-400">
+                <p class="text-lg mb-2">O contáctanos directamente:</p>
+                <p><i class="fas fa-phone mr-2 text-joker-green"></i> [Tu Número de Teléfono]</p>
+                <p><i class="fas fa-envelope mr-2 text-joker-green"></i> [Tu Email]</p>
+                <p><i class="fas fa-map-marker-alt mr-2 text-joker-green"></i> Estamos en Bogotá, Colombia (Añade más detalles si quieres)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-8 px-6 border-t border-gray-700">
+        <div class="container mx-auto text-center">
+            <div class="mb-4 flex justify-center space-x-5">
+                 <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-joker-green transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-joker-green transition duration-300">
+                    <i class="fab fa-facebook-square text-2xl"></i>
+                </a>
+                 <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-joker-green transition duration-300">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Pinturas el Joker. Todos los derechos reservados.</p>
+            <p class="text-sm mt-1">Diseño y pintura con personalidad en Bogotá.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para menú móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (opcional)
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
